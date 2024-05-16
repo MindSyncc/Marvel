@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <a href="" class="Logo">Marvel</a>
+            <a href=""><img src="./src/assets/Marvel-Logo.png"></a>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Contato</a></li>
@@ -17,38 +17,39 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <div class="slider">
 
-    <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <button id="botao" class="btn-veja">Veja os herois!</button>
+                
+                <div class="slide first">
+                    <img src="./src/assets/thor.jfif" alt="Imagem-1"/>
+                </div>
+                <div class="slide">
+                    <img src="./src/assets/ironMan.jfif" alt="Imagem-1"/>
+                </div>
+                <div class="slide">
+                    <img src="./src/assets/imagem.jpg" alt="Imagem-1"/>
+                </div>
+                
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
 
-        <div class="slides">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <button id="botao" class="btn-veja">Veja os herois!</button>
-            
-            <div class="slide first">
-                <img src="./src/assets/imagem.jpg" alt="Imagem-1"/>
             </div>
-            <div class="slide">
-                <img src="./src/assets/imagem.jpg" alt="Imagem-1"/>
+                
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
             </div>
-            <div class="slide">
-                <img src="./src/assets/imagem.jpg" alt="Imagem-1"/>
-            </div>
-            
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-            </div>
-
         </div>
-            
-        <div class="manual-navigation">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-        </div>
-    </div>
+    </main>
 </body>
 </html>
