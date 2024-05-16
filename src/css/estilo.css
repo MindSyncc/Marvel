@@ -1,3 +1,4 @@
+
 footer{
     display: flex;
     justify-content: center;
@@ -38,3 +39,157 @@ input{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    background-color: red;
+}
+
+.Logo{
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 20px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 1s ease;
+}
+
+nav {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul{
+    width: 800px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav ul li{
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    transition: 0.3s ease-in-out;
+}
+
+.Logo:hover{
+    color: yellow;
+}
+
+
+nav ul li a:hover{
+    color: yellow;
+    transition: 0.3s ease;
+    border-bottom: 3px solid yellow;
+}
+
+.btn-veja{
+    position: absolute;
+    top: 400px;
+    left: 74%;
+    transform: translate(-50%, -50%);
+    background-color: aqua;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-veja:hover{
+    background-color: aquamarine;
+}
+
+.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: 515px;
+    overflow: hidden;
+    background-color: #ffff;
+    position: relative;
+}
+
+.slides{
+    width: 400%;
+    height: 515px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+
+/*CADA SLIDE*/
+.slide{
+    width: 25%;
+    position: relative;
+}
+
+.slide img{
+    width: 100%;
+    height: 500px;
+}
+
+.manual-navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+}
+
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio2:checked ~ .btn-veja {
+    display: none;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+#radio3:checked ~ .btn-veja {
+    display: none;
+}
+.hidden{
+    display: none;
+}
+
