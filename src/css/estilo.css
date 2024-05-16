@@ -42,19 +42,18 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: white;
-    transition: 0.5;
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
+    transition: 0.3s ease-in-out;
 }
 
 .Logo:hover{
     color: yellow;
-    transition: 1s;
-    text-decoration: underline;
 }
 
 
 nav ul li a:hover{
     color: yellow;
-    text-decoration: underline;
+    transition: 0.3s ease;
+    border-bottom: 3px solid yellow;
 }
