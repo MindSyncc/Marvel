@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    background-color: red;
+}
+
+.Logo{
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 20px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 1s ease;
+}
+
+nav {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul{
+    width: 800px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav ul li{
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.5;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Logo:hover{
+    color: yellow;
+    transition: 1s;
+    text-decoration: underline;
+}
+
+
+nav ul li a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
