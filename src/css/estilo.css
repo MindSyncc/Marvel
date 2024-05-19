@@ -104,24 +104,6 @@ nav ul li a:hover{
     border-bottom: 3px solid yellow;
 }
 
-.btn-veja{
-    position: absolute;
-    z-index: 1;
-    top: 40%;
-    left: 70%;
-    background-color: rgb(255, 0, 0);
-    color: #fff;
-    border: none;
-    padding: 20px 100px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-veja:hover{
-    background-color: rgb(212, 0, 0);
-}
-
 .slider{
     margin-top: 100px; /*margem igual à altura do header para evitar sobreposição*/
     position: relative;
@@ -132,10 +114,6 @@ nav ul li a:hover{
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
-
-
-    
-
 }
 
 .slides{
@@ -210,7 +188,20 @@ nav ul li a:hover{
 .lancamentos{
     margin-top: 40svh;
     text-align: center;
+    animation: fade-in linear;
+    animation-timeline: view(800px 0px);
 }
+
+@keyframes fade-in {
+    from {
+      scale: 0.8;
+      opacity: 0;
+    }
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
 
 .container{
     display: flex;
@@ -228,7 +219,7 @@ nav ul li a:hover{
     background-position-y: 0;
     background-size: 100% 400px;
     background-repeat: no-repeat;
-    box-shadow: 0px -40px 50px rgba(0, 0, 0, 0.5);;
+    box-shadow: 0px -40px 50px rgba(0, 0, 0, 0.5);
 
     
 }
@@ -249,7 +240,8 @@ nav ul li a:hover{
 }
 
 .contato{
-    margin-top: 100px;
+    margin-top: 200px;
+    margin-bottom: 200px;
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -259,7 +251,21 @@ nav ul li a:hover{
 
 footer{
     display: flex;
-    justify-content: center;
+    align-items: end;
+    position: relative;
+    width: 100%;
+
+}
+
+footer h1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+footer img{
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
 }
 
 .mensagem.hidden{
@@ -286,3 +292,4 @@ input{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
