@@ -36,6 +36,7 @@ html::after{
     opacity: .6;
 }
 
+
 header{
     position: fixed;
     top: 0;
@@ -44,7 +45,7 @@ header{
     padding: 1em;
     display: flex;
     z-index: 2;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 header img{
@@ -186,10 +187,12 @@ nav ul li a:hover{
 
 
 .lancamentos{
+    width: 100%;
     margin-top: 40svh;
     text-align: center;
     animation: fade-in linear;
     animation-timeline: view(800px 0px);
+    overflow-x: hidden;
 }
 
 @keyframes fade-in {
@@ -198,30 +201,49 @@ nav ul li a:hover{
       opacity: 0;
     }
     to {
-      scale: 1;
-      opacity: 1;
+        scale: 1;
+        opacity: 1;
     }
-  }
-
-.container{
-    display: flex;
 }
+
+.lancamentos .container{
+    position: relative;
+    width: 90%;
+    margin: 0 auto; /*centraliza o carrossel no meio*/
+    display: flex;
+    gap: 20px;
+    transform: translate(0%, 0%);
+}
+
+.lancamentos .container h1{
+    user-select: none;
+}
+
+.flecha{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(50%);
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    z-index: 2;
+}
+
 
 .lancamentos .card{
     display: flex;
     justify-content: center;
     position: relative;
-    padding: 220px 200px;
+    padding: 200px 190px;
     margin-top: 90px;
-    margin-right: auto;
-    margin-left: auto;
     font-size: 10px;
     background-position-y: 0;
-    background-size: 100% 400px;
+    background-size: 100% 90%;
     background-repeat: no-repeat;
-    box-shadow: 0px -40px 50px rgba(0, 0, 0, 0.5);
-
-    
+    box-shadow: 0px -40px 100px rgba(0, 0, 0, 0.5);  
+    cursor: pointer;
 }
 
 .lancamentos .card h1{
@@ -235,13 +257,21 @@ nav ul li a:hover{
 .card:nth-child(2){
     background-image: url(../assets/hulkbrinquedo.webp);
 }
-.card:last-child{
+
+.card:nth-child(3){
     background-image: url(../assets/scarletwitchbrinquedo.webp);
 }
+.card:nth-child(4){
+    background-image: url(../assets/capitaoamerica_brinquedo.jpg);
+}
+.card:last-child{
+    background-image: url(../assets/venombrinquedo.jpg);
+}
+
 
 .contato{
     margin-top: 200px;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -263,7 +293,7 @@ footer h1{
     transform: translateX(-50%);
 }
 footer img{
-    width: 250px;
+    width: 220px;
     height: 250px;
     margin-left: auto;
 }
@@ -280,16 +310,14 @@ input{
     padding-left: 1.6rem;
 }
 #emailEnviar{
+    margin-top: 20px;
     border-radius: 32px;
     width: 350px;
     height: 20px;
     padding: 1rem;
-    border-color:blueviolet;
+    border-color:rgb(255, 0, 0);
 }
 .titulo{   
-    background-image: linear-gradient(to left, #ff007f,#000137);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #fff;
 }
 
